@@ -52,7 +52,7 @@ p{
   opacity:0.95;
   margin-top:-5px;
   margin-bottom:10px;
-  font-size:1.8em; /* plus grand sur PC */
+  font-size:1.8em;
 }
 
 .links-container{
@@ -105,30 +105,32 @@ p{
 
 /* PC */
 @media (min-width:700px){
-
   p{
     font-size:2em;
   }
 
   .link{
     width:200px;
-    height:200px;
+    min-height:200px; /* permet de scroller si nécessaire */
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     font-size:26px;
   }
 
   .link i{
-    font-size:80px; /* logo plus grand pour remplir la case */
+    font-size:80px;
+    width:auto;
   }
 
   .link span{
-    font-size:24px; /* texte plus grand */
+    font-size:24px;
+    text-align:center;
   }
-
 }
 
 /* MOBILE */
 @media (max-width:699px){
-
   .links-container{
     flex-direction:column;
     align-items:stretch;
@@ -149,7 +151,6 @@ p{
   .link span{
     text-align:center;
   }
-
 }
 </style>
 </head>
