@@ -8,77 +8,82 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 body{
   font-family: Arial, sans-serif;
   margin:0;
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
   min-height:100vh;
   background:linear-gradient(135deg,#ff7a18,#ffd200);
   color:white;
   text-align:center;
+  padding-top:40px;
 }
 
 .card{
-  width:90%;
-  max-width:800px;
   background:rgba(255,255,255,0.15);
-  padding:35px;
+  padding:40px;
   border-radius:25px;
   backdrop-filter:blur(12px);
   box-shadow:0 10px 30px rgba(0,0,0,0.2);
   display:flex;
   flex-direction:column;
   align-items:center;
-  gap:25px;
+  gap:30px;
+  max-width:1000px;
+  width:90%;
 }
 
 .profile{
-  width:130px;
-  height:130px;
+  width:180px;
+  height:180px;
   border-radius:50%;
   border:5px solid white;
-  margin-bottom:10px;
+  margin-bottom:15px;
 }
 
 h1{
   margin:10px 0 5px 0;
+  font-size:2em;
 }
 
 p{
   opacity:0.9;
-  margin-bottom:15px;
+  margin-bottom:20px;
+  font-size:1.2em;
 }
 
 .links-container{
   display:flex;
-  flex-direction:column;
-  gap:12px;
+  flex-wrap:wrap;
+  gap:20px;
+  justify-content:center;
   width:100%;
 }
 
+/* Boutons généraux */
 .link{
   display:flex;
   align-items:center;
+  justify-content:flex-start;
   gap:12px;
-  width:100%;
-  height:45px; /* boutons réduits */
-  padding-left:20px;
-  border-radius:14px;
+  padding:15px;
+  border-radius:12px;
   color:white;
   font-weight:bold;
   text-decoration:none;
-  font-size:15px;
+  font-size:16px;
   border:2px solid white;
   transition:all 0.25s ease;
+  min-width:120px;
+  box-sizing:border-box;
 }
 
 .link i{
   width:30px;
-  font-size:18px;
   text-align:center;
+  font-size:20px;
 }
 
 .link span{
@@ -87,7 +92,7 @@ p{
 }
 
 .link:hover{
-  transform:scale(1.03);
+  transform:scale(1.05);
   box-shadow:0 6px 18px rgba(0,0,0,0.3);
 }
 
@@ -100,31 +105,40 @@ p{
 .blog{background:#ff7a18;}
 .github{background:#24292e;}
 
-/* Mobile : vertical */
-@media (max-width:700px){
-  .card{
+/* PC : boutons carrés côte à côte */
+@media (min-width:700px){
+  .link{
+    width:150px;
+    height:150px;
+    justify-content:center;
     flex-direction:column;
-    align-items:center;
+    font-size:16px;
   }
-  .links-container{
-    flex-direction:column;
-  }
-}
-
-/* PC : horizontal à côté de la photo */
-@media (min-width:701px){
-  .card{
-    flex-direction:row;
-    align-items:center;
-    justify-content:flex-start;
-  }
-  .links-container{
-    flex-direction:column;
-    margin-left:30px;
+  .link i{
+    font-size:32px;
     width:auto;
   }
+  .link span{
+    text-align:center;
+  }
 }
 
+/* Mobile : boutons ajustés au texte */
+@media (max-width:699px){
+  .links-container{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .link{
+    width:auto;
+    height:45px;
+    font-size:15px;
+    padding:0 15px;
+  }
+  .link i{
+    font-size:18px;
+  }
+}
 </style>
 </head>
 
@@ -134,10 +148,10 @@ p{
 
 <img src="logo.png" class="profile">
 
-<div class="links-container">
-
 <h1>TekoLyo</h1>
 <p>Petit créateur de contenu</p>
+
+<div class="links-container">
 
 <a class="link youtube" href="https://www.youtube.com/@TekoLyo" target="_blank">
 <i class="fab fa-youtube"></i><span>YouTube</span>
