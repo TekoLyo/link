@@ -1,76 +1,135 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Linksite de TekoLyo</title>
-    <style>
-       body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ff7a18, #ffd200);
-    color: white;
-    text-align: center;
-    padding: 40px;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Linksite de TekoLyo</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family: Arial, sans-serif;
+margin:0;
+padding:0;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:linear-gradient(135deg,#ff7a18,#ffd200);
+color:white;
+text-align:center;
 }
 
-        .card {
-            max-width: 400px;
-            margin: auto;
-            background: rgba(255,255,255,0.15);
-            padding: 30px;
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-        }
+.card{
+width:90%;
+max-width:420px;
+background:rgba(255,255,255,0.15);
+padding:35px;
+border-radius:25px;
+backdrop-filter:blur(12px);
+box-shadow:0 10px 30px rgba(0,0,0,0.2);
+}
 
-        img {
-            width: 120px;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
+.profile{
+width:130px;
+height:130px;
+border-radius:50%;
+border:4px solid white;
+margin-bottom:15px;
+}
 
-        h1 {
-            margin-bottom: 5px;
-        }
+h1{
+margin:10px 0;
+}
 
-        p {
-            opacity: 0.9;
-        }
+p{
+opacity:0.9;
+margin-bottom:25px;
+}
 
-        a {
-            display: block;
-            margin: 15px 0;
-            padding: 15px;
-            background: white;
-            color: #2575fc;
-            text-decoration: none;
-            border-radius: 12px;
-            font-weight: bold;
-            transition: transform 0.2s;
-        }
+.link{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:10px;
+margin:12px 0;
+padding:15px;
+border-radius:14px;
+background:white;
+color:#ff7a18;
+font-weight:bold;
+text-decoration:none;
+transition:all 0.25s ease;
+}
 
-        a:hover {
-            transform: scale(1.05);
-        }
-    </style>
+.link i{
+font-size:20px;
+}
+
+.link:hover{
+transform:scale(1.07);
+box-shadow:0 5px 20px rgba(0,0,0,0.25);
+}
+
+@media (max-width:500px){
+
+.card{
+padding:25px;
+}
+
+.link{
+padding:14px;
+font-size:15px;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <div class="card">
-        <h1>Linksite de TekoLyo</h1>
-        <p>Petit créateur de contenu </p>
+<div class="card">
 
-        <a href="https://www.youtube.com/@TekoLyo">YouTube</a>
-        <a href="https://twitch.tv/tekolyo">Twitch</a>
-        <a href="https://discord.gg/AYFfKHQdDA">Discord</a>
-        <a href="https://tiktok.com/@tekolyo">TikTok</a>
-        <a href="https://instagram.com/tekolyo">Instagram</a>
-	<a href="https://blogdetekolyo.blogspot.com">Le Blog</a>
-		<a href="https://github.com/TekoLyo/tekolyomod">MES MODS MINECRAFT</a>
+<img src="logo.png" class="profile">
 
-    </div>
+<h1>TekoLyo</h1>
+<p>Petit créateur de contenu</p>
+
+<a class="link" href="https://www.youtube.com/@TekoLyo" target="_blank">
+<i class="fab fa-youtube"></i> YouTube
+</a>
+
+<a class="link" href="https://twitch.tv/tekolyo" target="_blank">
+<i class="fab fa-twitch"></i> Twitch
+</a>
+
+<a class="link" href="https://discord.gg/AYFfKHQdDA" target="_blank">
+<i class="fab fa-discord"></i> Discord
+</a>
+
+<a class="link" href="https://tiktok.com/@tekolyo" target="_blank">
+<i class="fab fa-tiktok"></i> TikTok
+</a>
+
+<a class="link" href="https://instagram.com/tekolyo" target="_blank">
+<i class="fab fa-instagram"></i> Instagram
+</a>
+
+<a class="link" href="https://blogdetekolyo.blogspot.com" target="_blank">
+<i class="fas fa-blog"></i> Le Blog
+</a>
+
+<a class="link" href="https://github.com/TekoLyo/tekolyomod" target="_blank">
+<i class="fab fa-github"></i> Mes Mods Minecraft
+</a>
+
+</div>
 
 </body>
 </html>
-
 
 
 
