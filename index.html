@@ -62,7 +62,7 @@ p{
   width:100%;
 }
 
-/* Boutons généraux */
+/* Boutons */
 
 .link{
   display:flex;
@@ -107,7 +107,7 @@ p{
 .blog{background:#ff7a18;}
 .github{background:#24292e;}
 
-/* PC : boutons carrés */
+/* PC */
 
 @media (min-width:700px){
 
@@ -130,20 +130,21 @@ p{
 
 }
 
-/* Mobile : boutons taille du texte */
+/* MOBILE : toutes les cases même taille */
 
 @media (max-width:699px){
 
   .links-container{
     flex-direction:column;
-    align-items:flex-start;
+    align-items:stretch;
+    width:100%;
   }
 
   .link{
-    width:auto;
+    width:100%;
     height:auto;
     font-size:1.2em;
-    padding:6px 15px;
+    padding:8px 15px;
   }
 
   .link i{
@@ -167,31 +168,38 @@ p{
 <div class="links-container">
 
 <a class="link youtube" href="https://www.youtube.com/@TekoLyo" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-youtube"></i><span>YouTube</span>
+<i class="fab fa-youtube"></i>
+<span>YouTube</span>
 </a>
 
 <a class="link tiktok" href="https://tiktok.com/@tekolyo" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-tiktok"></i><span>TikTok</span>
+<i class="fab fa-tiktok"></i>
+<span>TikTok</span>
 </a>
 
 <a class="link twitch" href="https://twitch.tv/tekolyo" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-twitch"></i><span>Twitch</span>
+<i class="fab fa-twitch"></i>
+<span>Twitch</span>
 </a>
 
 <a class="link instagram" href="https://instagram.com/tekolyo" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-instagram"></i><span>Instagram</span>
+<i class="fab fa-instagram"></i>
+<span>Instagram</span>
 </a>
 
 <a class="link discord" href="https://discord.gg/AYFfKHQdDA" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-discord"></i><span>Discord</span>
+<i class="fab fa-discord"></i>
+<span>Discord</span>
 </a>
 
 <a class="link blog" href="https://blogdetekolyo.blogspot.com" target="_blank" rel="noopener noreferrer">
-<i class="fas fa-blog"></i><span>Le Blog</span>
+<i class="fas fa-blog"></i>
+<span>Le Blog</span>
 </a>
 
 <a class="link github" href="https://github.com/TekoLyo/tekolyomod" target="_blank" rel="noopener noreferrer">
-<i class="fab fa-github"></i><span>Mes Mods Minecraft</span>
+<i class="fab fa-github"></i>
+<span>Mes Mods Minecraft</span>
 </a>
 
 </div>
