@@ -8,7 +8,6 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 body{
   font-family: Arial, sans-serif;
   margin:0;
@@ -23,7 +22,7 @@ body{
 }
 
 .card{
-  background:linear-gradient(to right,#E35238,#FEDC01);
+  background: rgba(255,255,255,0.15);
   padding:40px;
   border-radius:25px;
   backdrop-filter:blur(12px);
@@ -53,7 +52,7 @@ p{
   opacity:0.95;
   margin-top:-5px;
   margin-bottom:10px;
-  font-size:1.2em;
+  font-size:1.8em; /* plus grand sur PC */
 }
 
 .links-container{
@@ -65,13 +64,13 @@ p{
 }
 
 /* boutons */
-
 .link{
   display:flex;
   align-items:center;
-  justify-content:flex-start;
+  justify-content:center;
+  flex-direction:column;
   gap:12px;
-  padding:15px;
+  padding:0;
   border-radius:12px;
   color:white;
   font-weight:bold;
@@ -83,14 +82,11 @@ p{
 }
 
 .link i{
-  width:30px;
-  text-align:center;
   font-size:20px;
 }
 
 .link span{
-  flex:1;
-  text-align:left;
+  text-align:center;
 }
 
 .link:hover{
@@ -99,7 +95,6 @@ p{
 }
 
 /* couleurs */
-
 .youtube{background:#FF0000;}
 .tiktok{background:#000000;}
 .twitch{background:#9146FF;}
@@ -108,38 +103,30 @@ p{
 .blog{background:#ff7a18;}
 .github{background:#24292e;}
 
-
 /* PC */
-
 @media (min-width:700px){
 
   p{
-    font-size:1.8em;
+    font-size:2em;
   }
 
   .link{
     width:200px;
     height:200px;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
     font-size:26px;
   }
 
   .link i{
-    font-size:60px;
-    width:auto;
+    font-size:80px; /* logo plus grand pour remplir la case */
   }
 
   .link span{
-    text-align:center;
+    font-size:24px; /* texte plus grand */
   }
 
 }
 
-
 /* MOBILE */
-
 @media (max-width:699px){
 
   .links-container{
@@ -155,16 +142,15 @@ p{
     align-items:center;
   }
 
-  .link span{
-    text-align:center;
-  }
-
   .link i{
     font-size:20px;
   }
 
-}
+  .link span{
+    text-align:center;
+  }
 
+}
 </style>
 </head>
 
