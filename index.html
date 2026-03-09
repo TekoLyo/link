@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Linksite de TekoLyo</title>
 
+<meta name="description" content="Les liens de TekoLyo : YouTube, Twitch, TikTok, Instagram et mes mods Minecraft.">
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -26,6 +28,7 @@ body{
   padding:40px;
   border-radius:25px;
   backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
   box-shadow:0 10px 30px rgba(0,0,0,0.2);
   display:flex;
   flex-direction:column;
@@ -41,6 +44,11 @@ body{
   border-radius:50%;
   border:5px solid white;
   margin-bottom:10px;
+  transition: transform 0.3s ease;
+}
+
+.profile:hover{
+  transform:scale(1.05) rotate(2deg);
 }
 
 h1{
@@ -63,7 +71,6 @@ p{
   width:100%;
 }
 
-/* boutons */
 .link{
   display:flex;
   align-items:center;
@@ -79,6 +86,8 @@ p{
   border:2px solid white;
   transition:all 0.25s ease;
   box-sizing:border-box;
+  position:relative;
+  overflow:hidden;
 }
 
 .link i{
@@ -90,8 +99,24 @@ p{
 }
 
 .link:hover{
-  transform:scale(1.05);
-  box-shadow:0 6px 18px rgba(0,0,0,0.3);
+  transform:scale(1.05) translateY(-3px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.35);
+}
+
+/* effet lumière */
+.link::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-100%;
+  width:100%;
+  height:100%;
+  background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+  transition:0.5s;
+}
+
+.link:hover::after{
+  left:100%;
 }
 
 /* couleurs */
@@ -105,13 +130,14 @@ p{
 
 /* PC */
 @media (min-width:700px){
+
   p{
     font-size:2em;
   }
 
   .link{
     width:200px;
-    min-height:200px; /* permet de scroller si nécessaire */
+    min-height:200px;
     flex-direction:column;
     justify-content:center;
     align-items:center;
@@ -120,17 +146,18 @@ p{
 
   .link i{
     font-size:80px;
-    width:auto;
   }
 
   .link span{
     font-size:24px;
     text-align:center;
   }
+
 }
 
 /* MOBILE */
 @media (max-width:699px){
+
   .links-container{
     flex-direction:column;
     align-items:stretch;
@@ -140,17 +167,16 @@ p{
   .link{
     width:100%;
     font-size:1.2em;
-    padding:8px 15px;
-    align-items:center;
+    padding:12px 15px;
+    flex-direction:row;
+    justify-content:center;
+    gap:10px;
   }
 
   .link i{
     font-size:20px;
   }
 
-  .link span{
-    text-align:center;
-  }
 }
 </style>
 </head>
@@ -201,13 +227,44 @@ p{
 <span>Mes Mods Minecraft</span>
 </a>
 
-  <a class="link design" href="https://forms.gle/sBdW49LiHyHUscLi6" target="_blank" rel="noopener noreferrer">
-<i class="fas fa-palette"></i>
-<span>Logo ou Bannière Gratuit</span>
-</a>
-  
 </div>
 </div>
+
+<script>
+const konamiCode = [
+"ArrowUp","ArrowUp",
+"ArrowDown","ArrowDown",
+"ArrowLeft","ArrowRight",
+"ArrowLeft","ArrowRight",
+"b","a"
+];
+
+let konamiPosition = 0;
+
+document.addEventListener("keydown", function(e){
+
+  const key = e.key;
+
+  if(key.toLowerCase() === konamiCode[konamiPosition].toLowerCase()){
+
+    konamiPosition++;
+
+    if(konamiPosition === konamiCode.length){
+
+      window.location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+
+      konamiPosition = 0;
+
+    }
+
+  } else {
+
+    konamiPosition = 0;
+
+  }
+
+});
+</script>
 
 </body>
 </html>
