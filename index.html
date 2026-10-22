@@ -9,16 +9,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
 <style>
 :root{--accent:#e35337;--ink:#111827;--muted:#64748b;--card:#fff;--border:#e5e7eb;--shadow:0 0 0 2px #111,5px 5px 0 2px #111;--radius:28px}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#fff1f5;color:#111;font-family:'Russo One',system-ui,sans-serif}a{color:inherit;text-decoration:none}.page{max-width:920px;margin:auto;padding:48px 20px 30px}.profile{text-align:center}.avatar{width:144px;height:144px;object-fit:cover;border-radius:50%;background:#ad1f28;box-shadow:0 0 0 3px var(--accent)}h1{font-size:clamp(1.8rem,5vw,2.5rem);margin:18px 0 12px;display:flex;justify-content:center;align-items:center;gap:9px;flex-wrap:wrap}.verified{font:700 18px system-ui;color:var(--accent);border:2px solid currentColor;border-radius:50%;width:22px;height:22px;display:inline-grid;place-items:center}.bio{margin:0 auto 24px;line-height:1.7}.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:24px 0 26px}.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#fff;border:2px solid #111;box-shadow:3px 3px 0 #111;transition:transform .15s,box-shadow .15s}.chip:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 #111}.social-icon{width:20px;height:20px;display:block;flex:0 0 20px}.chip.youtube .social-icon{color:#ff0033}.chip.tiktok .social-icon{color:#111}.chip.twitch .social-icon{color:#9146ff}.chip.instagram .social-icon{color:#d62976}.chip.discord .social-icon{color:#5865f2}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:#fff;border:2px solid #111;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.card-head{display:flex;align-items:center;gap:12px;padding:18px}.skin{width:48px;height:48px;image-rendering:pixelated;border-radius:10px;background:#f1f5f9}.small{font:13px system-ui;color:var(--muted);margin-top:4px}.tag{font:12px system-ui;border:1px solid #111;border-radius:999px;padding:5px 8px;margin-left:auto;white-space:nowrap}.game-icon{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;background:#ff465526;color:#ff4655;font:700 14px system-ui}.stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}.stat{text-align:center;padding:14px 8px}.stat+ .stat{border-left:1px solid var(--border)}.label{display:block;color:var(--muted);font:11px system-ui;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}.value{font-size:16px}.footer{text-align:center;margin-top:34px;font:12px system-ui;color:#64748b}.share{position:fixed;right:18px;top:18px;border:2px solid #111;border-radius:50%;width:44px;height:44px;background:#fff;box-shadow:3px 3px #111;font-size:19px;cursor:pointer}.notice{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111;color:white;padding:10px 14px;border-radius:10px;font:13px system-ui;display:none}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;background:#fff1f5;color:#111;font-family:'Russo One',system-ui,sans-serif}a{color:inherit;text-decoration:none}.page{max-width:920px;margin:auto;padding:48px 20px 30px}.profile{text-align:center}.avatar{width:144px;height:144px;object-fit:cover;border-radius:50%;background:#ad1f28;box-shadow:0 0 0 3px var(--accent)}h1{font-size:clamp(1.8rem,5vw,2.5rem);margin:18px 0 12px;display:flex;justify-content:center;align-items:center;gap:9px;flex-wrap:wrap}.bio{margin:0 auto 24px;line-height:1.7}.socials{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin:24px 0 26px}.chip{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:999px;background:#fff;border:2px solid #111;box-shadow:3px 3px 0 #111;transition:transform .15s,box-shadow .15s}.chip:hover{transform:translate(2px,2px);box-shadow:1px 1px 0 #111}.social-icon{width:20px;height:20px;display:block;flex:0 0 20px}.chip.youtube .social-icon{color:#ff0033}.chip.tiktok .social-icon{color:#111}.chip.twitch .social-icon{color:#9146ff}.chip.instagram .social-icon{color:#d62976}.chip.discord .social-icon{color:#5865f2}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{background:#fff;border:2px solid #111;border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}.card-head{display:flex;align-items:center;gap:12px;padding:18px}.skin{width:48px;height:48px;image-rendering:pixelated;border-radius:10px;background:#f1f5f9}.small{font:13px system-ui;color:var(--muted);margin-top:4px}.tag{font:12px system-ui;border:1px solid #111;border-radius:999px;padding:5px 8px;margin-left:auto;white-space:nowrap}.game-icon{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;background:#ff465526;color:#ff4655;font:700 14px system-ui}.stats{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--border)}.stat{text-align:center;padding:14px 8px}.stat+ .stat{border-left:1px solid var(--border)}.label{display:block;color:var(--muted);font:11px system-ui;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}.value{font-size:16px}.footer{text-align:center;margin-top:34px;font:12px system-ui;color:#64748b}
 @media(max-width:640px){.page{padding:36px 16px 24px}.grid{grid-template-columns:1fr}.avatar{width:124px;height:124px}.tag{font-size:11px}}
 </style>
 </head>
 <body>
-<button class="share" id="share" aria-label="Partager" title="Partager">↗</button>
 <main class="page">
 <header class="profile">
 <img class="avatar" src="https://cdn.discordapp.com/avatars/972491118786793482/c9139ffcd618710c57e423c917222368.png?size=256" alt="Avatar de TekoLyo">
-<h1>TekoLyo <span class="verified" title="Compte vérifié">✓</span></h1>
+<h1>TekoLyo</h1>
 <p class="bio"><strong>Salut TekoLyo</strong><br><strong>#M8</strong></p>
 </header>
 <nav class="socials" aria-label="Réseaux sociaux">
@@ -39,14 +38,5 @@
 </section>
 <footer class="footer">Page personnelle de TekoLyo</footer>
 </main>
-<div class="notice" id="notice" role="status">Lien copié !</div>
-<script>
-document.getElementById('share').addEventListener('click', async () => {
-  const url = window.location.href;
-  try { if (navigator.share) await navigator.share({title:'TekoLyo', url}); else { await navigator.clipboard.writeText('https://link.unclaim.fr/tekolyo'); showNotice('Lien copié !'); } }
-  catch(e) { /* partage annulé */ }
-});
-function showNotice(text){const n=document.getElementById('notice');n.textContent=text;n.style.display='block';setTimeout(()=>n.style.display='none',1800)}
-</script>
 </body>
 </html>
